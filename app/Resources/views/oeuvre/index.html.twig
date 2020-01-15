@@ -1,0 +1,41 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+    <a type="button" class="btn btn-primary" href="{{ path('oeuvre_new') }}" >Nouvelle Oeuvre</a>
+    <fieldset class="form-group">
+        <legend>Liste des oeuvres</legend>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Code Oeuvre</th>
+                <th>Nom Oeuvre</th>
+                <th>Nom Auteur</th>
+                <th>Date Creation</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for oeuvre in oeuvres %}
+                <tr>
+                    <td><a href="{{ path('oeuvre_show', { 'id': oeuvre.id }) }}">{{ oeuvre.id }}</a></td>
+                    <td>{{ oeuvre.codeOeuvre }}</td>
+                    <td>{{ oeuvre.nomOeuvre }}</td>
+                    <td>{{ oeuvre.nomAuteur }}</td>
+                    <td>{% if oeuvre.dateCreation %}{{ oeuvre.dateCreation|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('oeuvre_show', { 'id': oeuvre.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('oeuvre_edit', { 'id': oeuvre.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </fieldset>
+{% endblock %}

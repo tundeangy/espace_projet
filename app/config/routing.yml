@@ -1,0 +1,19 @@
+app_oeuvre:
+    resource: "@AppBundle/Controller/OeuvreController.php"
+    type:     annotation
+
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

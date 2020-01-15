@@ -1,0 +1,28 @@
+.customTable{
+    color:black;
+}
+
+.custom-text-black{
+    color: black !important;
+}
+
+label {
+    color:black;
+    font-style: revert;
+}
+p {
+    color:black !important;
+    font-style: revert;
+}
+
+
+
+.custom-bg-gray {
+    background-color: rgba(162, 164, 175, 0.78) !important;
+}
+
+a.bg-danger:hover, a.bg-danger:focus,
+button.bg-danger:hover,
+button.bg-danger:focus {
+    background-color: #b52b27 !important;
+}

@@ -1,0 +1,98 @@
+<?php
+
+namespace UserBundle\Entity;
+
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="user")
+ */
+class User extends BaseUser
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255, nullable=true)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length=13, nullable=true)
+     */
+    private $telephone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fullname", type="string", length=255, nullable=true)
+     */
+    private $fullname;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="actif", type="boolean")
+     */
+    private $actif;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="supprimer", type="boolean")
+     */
+    private $supprimer;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetimetz")
+     */
+    private $created;
+//
+//    /**
+//     * @var bool
+//     *
+//     * @ORM\Column(name="verification_telephone", type="boolean", nullable=true)
+//     */
+//    private $verificationTelephone;
+
+//    /**
+//     * @var string
+//     *
+//     * @ORM\Column(name="numCompte", type="string", length=255, unique=true, nullable=true)
+//     */
+//    private $numCompte;
+
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_naissance", type="date",nullable=true)
+     */
+    private $dateNaissance;
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+}

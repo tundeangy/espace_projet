@@ -1,0 +1,105 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item account-dropdown">
+            {#<a class="nav-link" data-toggle="collapse" href="#account-dropdown" aria-expanded="false"
+               aria-controls="account-dropdown">
+                <img class="img-sm rounded-circle" src="{{ asset('frontAdmin/images/faces-clipart/pic-1.png') }}" alt="">
+                <p class="mb-0 ml-3 text-light">Stella Johnson</p>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="account-dropdown">
+                <ul class="nav flex-column sub-menu pl-0">
+                    <li class="nav-item">
+                        <a class="nav-link pl-5" href="#">
+                      <span class="menu-icon">
+                        <i class="mdi mdi-account"></i>
+                      </span>
+                            <span class="menu-title">Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-5" href="#">
+                      <span class="menu-icon">
+                        <i class="mdi mdi-email"></i>
+                      </span>
+                            <span class="menu-title">Inbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-5" href="#">
+                      <span class="menu-icon">
+                        <i class="mdi mdi-wrench"></i>
+                      </span>
+                            <span class="menu-title">Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-5" href="#">
+                      <span class="menu-icon">
+                        <i class="mdi mdi-power"></i>
+                      </span>
+                            <span class="menu-title">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>#}
+        </li>
+
+
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#conge-layouts" aria-expanded="false"
+               aria-controls="conge-layouts">
+                <span class="menu-icon">
+                  <i class="mdi mdi-view-list"></i>
+                </span>
+                <span class="menu-title">Parametrages</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="conge-layouts">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="">Liste</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Nouveau</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#employe-layouts" aria-expanded="false"
+               aria-controls="employe-layouts">
+                <span class="menu-icon">
+                  <i class="mdi mdi-crosshairs-gps"></i>
+                </span>
+                <span class="menu-title">Oeuvres</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="employe-layouts">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="{{ path('oeuvre_index') }}">Liste</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('oeuvre_new') }}"> Nouveau</a></li>
+
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#flux-layouts" aria-expanded="false"
+               aria-controls="flux-layouts">
+                <span class="menu-icon">
+                  <i class="mdi mdi-crosshairs-gps"></i>
+                </span>
+                <span class="menu-title">Flux</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="flux-layouts">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="{{ path('oeuvre_index') }}">Liste</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('oeuvre_new') }}"> Nouveau</a></li>
+
+                </ul>
+            </div>
+        </li>
+
+    </ul>
+</nav>
+
+

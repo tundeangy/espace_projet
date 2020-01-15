@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+
+    <title>Art Museum</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+
+    <link rel="stylesheet" href="{{ asset('front/css/linearicons.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/main.css') }}">
+
+</head>
+<body>
+{% block header %}
+    {% include 'block/header.html.twig' %}
+{% endblock %}
+
+
+<!-- start banner Area -->
+{% block banner %}
+    {% include 'block/bannerHome.html.twig' %}
+{% endblock %}
+<!-- End banner Area -->
+
+
+{% block body %}
+    {% include 'block/content.html.twig' %}
+{% endblock %}
+
+{% block footer %}
+{% include 'block/footer.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('front/js/vendor/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ asset('front/js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('front/js/easing.min.js') }}"></script>
+    <script src="{{ asset('front/js/hoverIntent.js') }}"></script>
+    <script src="{{ asset('front/js/superfish.min.js') }}"></script>
+    <script src="{{ asset('front/js/superfish.min.js') }}"></script>
+    <script src="{{ asset('front/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('front/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('front/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('front/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('front/js/justified.min.js') }}"></script>
+    <script src="{{ asset('front/js/jquery.sticky.js') }}"></script>
+    <script src="{{ asset('front/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('front/js/parallax.min.js') }}"></script>
+    <script src="{{ asset('front/js/mail-script.js') }}"></script>
+    <script src="{{ asset('front/js/main.js') }}"></script>
+
+
+
+
+    {#<script src="js/vendor/jquery-2.2.4.min.js"></script>#}
+    {#<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>#}
+    {#<script src="js/vendor/bootstrap.min.js"></script>#}
+    {#<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>#}
+    {#<script src="js/easing.min.js"></script>#}
+    {#<script src="js/hoverIntent.js"></script>#}
+    {#<script src="js/superfish.min.js"></script>#}
+    {#<script src="js/jquery.ajaxchimp.min.js"></script>#}
+    {#<script src="js/jquery.magnific-popup.min.js"></script>#}
+    {#<script src="js/owl.carousel.min.js"></script>#}
+    {#<script src="js/imagesloaded.pkgd.min.js"></script>#}
+    {#<script src="js/justified.min.js"></script>#}
+    {#<script src="js/jquery.sticky.js"></script>#}
+    {#<script src="js/jquery.nice-select.min.js"></script>#}
+    {#<script src="js/parallax.min.js"></script>#}
+    {#<script src="js/mail-script.js"></script>#}
+    {#<script src="js/main.js"></script>#}
+
+{% endblock %}
+</body>
+</html>
